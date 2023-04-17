@@ -1,0 +1,23 @@
+<div class="ContainerSobre">
+    <app-header></app-header>
+    <div class="Descricao">
+        <h2>Sobre o projeto:</h2>
+        <p>Este projeto foi desenvolvido para caso de estudo sobre os recursos do Framework Angular.</p>
+    </div>
+    <div class="Devs">
+        <app-card-dev
+            [imagem]="devs[0].imagem"
+            [nome]="devs[0].nome"
+            [email]="devs[0].email"
+            [linkedin]="devs[0].linkedin"
+            [github]="devs[0].github"
+        ></app-card-dev>
+        <app-card-dev
+            [imagem]="devs[1].imagem"
+            [nome]="devs[1].nome"
+            [email]="devs[1].email"
+            [linkedin]="devs[1].linkedin"
+            [github]="devs[1].github"
+        ></app-card-dev>
+    </div>
+</div>

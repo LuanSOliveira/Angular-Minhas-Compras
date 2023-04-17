@@ -1,0 +1,17 @@
+.ContainerSobre{
+    background: #121214;
+    width: 100vw;
+    min-height: 100vh;
+    color: #fff;
+
+    .Descricao{
+        margin: 1rem 0 1rem 0.5rem;
+        width: 300px;
+    }
+
+    .Devs{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

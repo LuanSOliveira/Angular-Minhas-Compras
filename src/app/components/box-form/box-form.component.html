@@ -1,9 +1,15 @@
 <div class="BoxForm">
     <p class="Informacao" routerLink="/sobre">i</p>
-    <form>
+    <form [formGroup]="formulario" (submit)="Submeter($event)">
         <h2>O que comprar?</h2>
-        <input placeholder="{{listaDescricao[0]}}" type="{{listaTipos[0]}}"/>
-        <input placeholder="{{listaDescricao[1]}}" type="{{listaTipos[1]}}"/>
+        <input placeholder="{{listaDescricao[0]}}" type="{{listaTipos[0]}}" formControlName="item"/>
+        <div class="Alerta" *ngIf="formulario.get('item')?.errors && formulario.get('item')?.touched">
+            <p>Informe um item</p>
+        </div>
+        <input placeholder="{{listaDescricao[1]}}" type="{{listaTipos[1]}}" formControlName="quantidade"/>
+        <div class="Alerta" *ngIf="formulario.get('quantidade')?.errors && formulario.get('quantidade')?.touched">
+            <p>Informe uma Quantidade</p>
+        </div>
         <button>Adicionar</button>
     </form>
 </div>

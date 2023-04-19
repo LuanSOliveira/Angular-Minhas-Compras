@@ -1,5 +1,5 @@
 .BoxForm{
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     
@@ -21,6 +21,7 @@
 
     form{
         font-size: 20px;
+        width: 300px;
         h2{
             color: #fff;
             margin-bottom: 0.5rem;
@@ -50,6 +51,12 @@
             &:hover{
                 background: #916aee;
             }
+        }
+
+        .Alerta{
+            color: #ff0000;
+            font-size: 15px;
+            margin-bottom: 15px;
         }
     }    
 }

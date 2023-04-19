@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IItens } from 'src/app/interfaces/itemInterface';
+import { ServiceItensService } from 'src/app/services/service-itens.service';
 
 @Component({
   selector: 'app-list',
@@ -8,20 +9,12 @@ import { IItens } from 'src/app/interfaces/itemInterface';
 })
 export class ListComponent {
   @Input() descricao: string = ''
+  @Input() statusLista: string = ''
 
-  listaTeste: IItens[] = [
-    {
-      "id" : 0,
-      "nome" : 'Arroz',
-      "quantidade" : 3,
-      "status" : 'lista'
-    },
-    {
-      "id" : 1,
-      "nome" : 'Feijão',
-      "quantidade" : 1,
-      "status" : 'carrinho'
-    },
-  ]
+  constructor (private ServiceItens: ServiceItensService){
+    
+  }
+
+  listaItens: IItens[] = this.ServiceItens.listaItens
 
 }
